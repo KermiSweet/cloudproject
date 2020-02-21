@@ -11,6 +11,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/goodsserver/pom.xml" />
         <option value="$PROJECT_DIR$/zuulModel/pom.xml" />
       </set>
     </option>

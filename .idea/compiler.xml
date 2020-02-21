@@ -7,14 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="market_base" />
-        <module name="eurekaserver" />
-        <module name="market_common" />
-        <module name="configserver" />
         <module name="zuulmodel" />
+        <module name="market_goods" />
+        <module name="configserver" />
+        <module name="eurekaserver" />
+        <module name="market_shoppingcar" />
+        <module name="market_common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka-server" target="1.8" />
+      <module name="goodsserver" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -22,8 +25,11 @@
       <module name="configserver" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
+      <module name="goodsserver" options="-parameters" />
       <module name="market_base" options="-parameters" />
       <module name="market_common" options="-parameters" />
+      <module name="market_goods" options="-parameters" />
+      <module name="market_shoppingcar" options="-parameters" />
       <module name="zuulmodel" options="-parameters" />
     </option>
   </component>
