@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: zuul
+      profile: test
+      label: master
+      uri: http://localhost:8888

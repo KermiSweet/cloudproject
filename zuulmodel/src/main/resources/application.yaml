@@ -1,0 +1,11 @@
+eureka:
+  instance:
+    hostname: localhost
+    port: 8082
+  client:
+    service-url: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+server:
+  port: 8769
+spring:
+  application:
+    name: zuul-model
