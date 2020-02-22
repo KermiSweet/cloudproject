@@ -18,6 +18,7 @@
         <module>market_shoppingcar</module>
         <module>market_mailsend</module>
         <module>mybatisGeneratorCore</module>
+        <module>market_datacheck</module>
     </modules>
     <packaging>pom</packaging>
 

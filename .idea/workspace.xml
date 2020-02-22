@@ -2,24 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/FocusMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/GoodsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/GoodsTypeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/NoticeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/OrderBaseMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/OrderDetailMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/ShoppingCarMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/Focus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/GoodsType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/Notice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/OrderBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/OrderDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/ShoppingCar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/config/RedisSessionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/util/RedisUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/test/java/RedisUtilTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/test/java/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/DataCheckApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/config/RedisTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/UserCheckService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/impl/UserCheckService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/test/java/UUIDTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +38,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -112,26 +121,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GeneratorSqlMap">
-    <configuration name="GeneratorSqlMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GeneratorSqlMap" />
-      <module name="mybatisGeneratorCore" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IdWorkerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="IdWorkerTest" />
+  <component name="RunManager" selected="Spring Boot.DataCheckApplication">
+    <configuration name="RedisUtilTest.setkey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="market_common" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RedisUtilTest" />
+      <option name="METHOD_NAME" value="setkey" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UUIDTest.UUID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="market_base" />
+    <configuration name="UserTest.user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="market_common" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UUIDTest" />
-      <option name="METHOD_NAME" value="UUID" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="user" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,6 +145,13 @@
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="configserver" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataCheckApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_datacheck" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.datacheck.DataCheckApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,21 +165,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.eurekaserver.EurekaServerStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServiceStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eurekaserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kermi.eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.eureka.EurekaServiceStarter" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,33 +205,46 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.IdWorkerTest" />
       <item itemvalue="Spring Boot.MarketApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.ZuulApplication" />
       <item itemvalue="Spring Boot.GoodsApplication" />
       <item itemvalue="Spring Boot.ShoppingCarApplication" />
-      <item itemvalue="Spring Boot.EurekaServiceStarter" />
-      <item itemvalue="Spring Boot.EurekaServerStart" />
-      <item itemvalue="JUnit.UUIDTest.UUID" />
       <item itemvalue="Spring Boot.MailSendApplication" />
-      <item itemvalue="Application.GeneratorSqlMap" />
+      <item itemvalue="Spring Boot.DataCheckApplication" />
+      <item itemvalue="JUnit.RedisUtilTest.setkey" />
+      <item itemvalue="JUnit.UserTest.user" />
+      <item itemvalue="Spring Boot.EurekaServerStart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GeneratorSqlMap" />
-        <item itemvalue="Application.IdWorkerTest" />
-        <item itemvalue="JUnit.UUIDTest.UUID" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
-        <item itemvalue="Spring Boot.EurekaServiceStarter" />
+        <item itemvalue="JUnit.UserTest.user" />
+        <item itemvalue="JUnit.RedisUtilTest.setkey" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
+        <option name="contentProportion" value="0.19588745" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a31075ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a31075ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@78d4d020" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a31075ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@56a4799b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -261,7 +271,7 @@
       <workItem from="1582246734048" duration="3029000" />
       <workItem from="1582249781817" duration="3025000" />
       <workItem from="1582268279258" duration="3408000" />
-      <workItem from="1582339420911" duration="4518000" />
+      <workItem from="1582339420911" duration="14947000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -277,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582343712744</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="move pojo,mapper to common">
+      <created>1582344060284</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582344060284</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +326,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar" />
     <MESSAGE value="mybatisgenerator" />
-    <option name="LAST_COMMIT_MESSAGE" value="mybatisgenerator" />
+    <MESSAGE value="move pojo,mapper to common" />
+    <option name="LAST_COMMIT_MESSAGE" value="move pojo,mapper to common" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

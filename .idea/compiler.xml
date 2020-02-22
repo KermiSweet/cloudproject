@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mybatisGeneratorCore" />
+        <module name="market_datacheck" />
         <module name="market_base" />
         <module name="market_mailsend" />
         <module name="zuulmodel" />
@@ -18,6 +19,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="datacheckService" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="goodsserver" target="1.8" />
     </bytecodeTargetLevel>
@@ -25,11 +27,13 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="configserver" options="-parameters" />
+      <module name="datacheckService" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="goodsserver" options="-parameters" />
       <module name="market_base" options="-parameters" />
       <module name="market_common" options="-parameters" />
+      <module name="market_datacheck" options="-parameters" />
       <module name="market_goods" options="-parameters" />
       <module name="market_mailsend" options="-parameters" />
       <module name="market_shoppingcar" options="-parameters" />

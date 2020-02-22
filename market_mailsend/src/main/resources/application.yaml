@@ -1,0 +1,12 @@
+# eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+  instance:
+    hostname: localhost
+    port: 8082
+# rabbitmq配置
+spring:
+  rabbitmq:
+    host: 120.79.14.47
