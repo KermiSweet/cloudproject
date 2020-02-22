@@ -16,6 +16,8 @@
         <module>zuulmodel</module>
         <module>market_goods</module>
         <module>market_shoppingcar</module>
+        <module>market_mailsend</module>
+        <module>mybatisGeneratorCore</module>
     </modules>
     <packaging>pom</packaging>
 

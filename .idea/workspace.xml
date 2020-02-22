@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
-      <change afterPath="$PROJECT_DIR$/market_goods/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_goods/src/main/java/com/kermi/marketgoods/GoodsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/ShoppingCarApplication.java" afterDir="false" />
+    <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/market_base/src/test/java/UUIDTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/test/java/IdWorkerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/market_mailsend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/src/main/java/com/kermi/mailsend/MailSendApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatisGeneratorCore/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/generatorConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,6 +56,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/market_base/src/main/java" />
@@ -69,7 +72,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -83,6 +86,11 @@
     </treeState>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -94,23 +102,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerStart">
-    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="configserver" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.configserver.ConfigServerApplication" />
+  <component name="RunManager" selected="Application.GeneratorSqlMap">
+    <configuration name="GeneratorSqlMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GeneratorSqlMap" />
+      <module name="mybatisGeneratorCore" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="eurekaserver" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kermi.eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.eureka.EurekaServer" />
+    <configuration name="IdWorkerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IdWorkerTest" />
+      <module name="market_common" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UUIDTest.UUID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="market_base" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UUIDTest" />
+      <option name="METHOD_NAME" value="UUID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="configserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.configserver.ConfigServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,9 +169,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MailSendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_mailsend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.mailsend.MailSendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MarketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="market_base" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.base.MarketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingCarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_shoppingcar" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.shoppingcar.ShoppingCarApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -165,21 +198,37 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.IdWorkerTest" />
       <item itemvalue="Spring Boot.MarketApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.EurekaServer" />
-      <item itemvalue="Spring Boot.EurekaServiceStarter" />
-      <item itemvalue="Spring Boot.EurekaServerStart" />
       <item itemvalue="Spring Boot.ZuulApplication" />
       <item itemvalue="Spring Boot.GoodsApplication" />
+      <item itemvalue="Spring Boot.ShoppingCarApplication" />
+      <item itemvalue="Spring Boot.EurekaServiceStarter" />
+      <item itemvalue="Spring Boot.EurekaServerStart" />
+      <item itemvalue="JUnit.UUIDTest.UUID" />
+      <item itemvalue="Spring Boot.MailSendApplication" />
+      <item itemvalue="Application.GeneratorSqlMap" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GeneratorSqlMap" />
+        <item itemvalue="Application.IdWorkerTest" />
+        <item itemvalue="JUnit.UUIDTest.UUID" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
         <item itemvalue="Spring Boot.EurekaServiceStarter" />
-        <item itemvalue="Spring Boot.EurekaServer" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -201,12 +250,31 @@
       <workItem from="1582200643299" duration="3983000" />
       <workItem from="1582246734048" duration="3029000" />
       <workItem from="1582249781817" duration="3025000" />
-      <workItem from="1582268279258" duration="1120000" />
+      <workItem from="1582268279258" duration="3408000" />
+      <workItem from="1582339420911" duration="4146000" />
     </task>
+    <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
+      <created>1582269410125</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582269410125</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
