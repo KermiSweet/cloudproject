@@ -19,6 +19,7 @@
         <module>market_mailsend</module>
         <module>mybatisGeneratorCore</module>
         <module>market_datacheck</module>
+        <module>market_userservice</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -63,6 +64,7 @@
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring.cloud.version}</version>
                 <scope>import</scope>
+                <type>pom</type>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -4,6 +4,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.Bean;
+import util.RedisUtil;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -11,5 +13,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 public class DataCheckApplication {
     public static void main(String[] args) {
         SpringApplication.run(DataCheckApplication.class, args);
+    }
+
+    @Bean
+    public RedisUtil redisUtil(){
+        return new RedisUtil();
     }
 }

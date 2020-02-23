@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/config/RedisSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/util/RedisUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/test/java/RedisUtilTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/test/java/UserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/DataCheckApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/config/RedisTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/UserCheckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/impl/UserCheckService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_mailsend/src/main/resources/application.yaml" afterDir="false" />
+    <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="market_base redis无法连接">
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/config/RedisTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/requestBody/RegiestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/market_userservice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/UserServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/DataCheckServiceFegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/util/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/test/java/IdWorkerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/test/java/IdWorkerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/DataCheckApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/DataCheckApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/UserCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/UserCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/impl/UserCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/impl/UserCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,6 +96,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="entity" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kermi.base.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\mapper" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\pojo" />
@@ -122,35 +129,14 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DataCheckApplication">
-    <configuration name="RedisUtilTest.setkey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="market_common" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RedisUtilTest" />
-      <option name="METHOD_NAME" value="setkey" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest.user" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="market_common" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserTest" />
-      <option name="METHOD_NAME" value="user" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="configserver" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.configserver.ConfigServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataCheckApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="DataCheckApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="market_datacheck" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kermi.datacheck.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.datacheck.DataCheckApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,58 +155,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoodsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="market_goods" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.marketgoods.GoodsApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MailSendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="market_mailsend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.mailsend.MailSendApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MarketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="MarketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="market_base" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kermi.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.base.MarketApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShoppingCarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="market_shoppingcar" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.shoppingcar.ShoppingCarApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="zuulmodel" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.zuulmodel.ZuulApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Spring Boot.MarketApplication" />
-      <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.ZuulApplication" />
-      <item itemvalue="Spring Boot.GoodsApplication" />
-      <item itemvalue="Spring Boot.ShoppingCarApplication" />
-      <item itemvalue="Spring Boot.MailSendApplication" />
-      <item itemvalue="Spring Boot.DataCheckApplication" />
-      <item itemvalue="JUnit.RedisUtilTest.setkey" />
-      <item itemvalue="JUnit.UserTest.user" />
-      <item itemvalue="Spring Boot.EurekaServerStart" />
-    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.MarketApplication" />
+        <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
-        <item itemvalue="JUnit.UserTest.user" />
-        <item itemvalue="JUnit.RedisUtilTest.setkey" />
       </list>
     </recent_temporary>
   </component>
@@ -232,17 +184,22 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a31075ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4bdbf774" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a31075ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@78d4d020" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4bdbf774" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ad0ba596" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a31075ea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@56a4799b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4bdbf774" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ff57b957" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4bdbf774" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bc7815d7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -271,7 +228,8 @@
       <workItem from="1582246734048" duration="3029000" />
       <workItem from="1582249781817" duration="3025000" />
       <workItem from="1582268279258" duration="3408000" />
-      <workItem from="1582339420911" duration="14947000" />
+      <workItem from="1582339420911" duration="23014000" />
+      <workItem from="1582431176006" duration="17541000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -294,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582344060284</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="datacheck add">
+      <created>1582359999656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582359999656</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +292,9 @@
     <MESSAGE value="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar" />
     <MESSAGE value="mybatisgenerator" />
     <MESSAGE value="move pojo,mapper to common" />
-    <option name="LAST_COMMIT_MESSAGE" value="move pojo,mapper to common" />
+    <MESSAGE value="datacheck add" />
+    <MESSAGE value="market_base redis无法连接" />
+    <option name="LAST_COMMIT_MESSAGE" value="market_base redis无法连接" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

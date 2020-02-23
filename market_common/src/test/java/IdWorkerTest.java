@@ -1,7 +1,9 @@
+import org.junit.Test;
 import util.IdWorker;
 
 public class IdWorkerTest {
-    public static void main(String[] args) {
+    @Test
+    public void getid() {
         IdWorker idWorker = new IdWorker(0, 0);
         System.out.println(String.valueOf(idWorker.nextId()).length());
         for (int i = 0; i < 1000 ; i++) {

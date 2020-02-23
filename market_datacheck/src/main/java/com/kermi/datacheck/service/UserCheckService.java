@@ -11,4 +11,11 @@ public interface UserCheckService {
      * @return true or false
      */
     public boolean emailExist(String email);
+
+    /**
+     * 用户名是否存在
+     * @param username
+     * @return true or false
+     */
+    public boolean nameExist(String username);
 }

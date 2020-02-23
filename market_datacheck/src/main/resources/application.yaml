@@ -16,7 +16,7 @@ spring:
   datasource:
     name: aliyunDatasource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://120.79.14.47:3306/shop
+    url: jdbc:mysql://120.79.14.47:3306/shop_kermi_test
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource

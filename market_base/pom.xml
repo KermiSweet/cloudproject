@@ -54,28 +54,6 @@
             <version>2.2.2.RELEASE</version>
         </dependency>
 
-        <!--swagger依赖-->
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.github.caspar-chen/swagger-ui-layer -->
-        <dependency>
-            <groupId>com.github.caspar-chen</groupId>
-            <artifactId>swagger-ui-layer</artifactId>
-            <version>1.1.3</version>
-        </dependency>
-
         <!--redis session-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -95,13 +73,14 @@
             <version>2.2.1.RELEASE</version>
         </dependency>
 
-        <!--slf4j-->
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <!--fastJson-->
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.8.0-beta2</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
         </dependency>
+
 
     </dependencies>
 </project>

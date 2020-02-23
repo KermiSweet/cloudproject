@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class RedisUtil {
 
-    @Resource(name = "redisTemplate")
+    @Resource
     private StringRedisTemplate redisTemplate;
 
     public void setRedisTemplate(StringRedisTemplate redisTemplate) {

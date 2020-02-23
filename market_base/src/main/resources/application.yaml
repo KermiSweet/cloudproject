@@ -1,13 +1,23 @@
 server:
   port: 8081
 spring:
+  redis:
+    database: 0
+    host: 120.79.14.47
+    port: 6379
+    timeout: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        min-idle: 0
   application:
     name: market-base
   #数据库配置
   datasource:
     name: aliyunDatasource
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://120.79.14.47:3306/shop
+    url: jdbc:mysql://120.79.14.47:3306/shop_kermi_test
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
@@ -24,16 +34,6 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
-  redis:
-    database: 0
-    host: 120.79.14.47
-    port: 6379
-    timeout: 0
-    jedis:
-      pool:
-        max-active: 8
-        max-wait: -1
-        min-idle: 0
   rabbitmq:
     host: 120.79.14.47
 # mybatis配置

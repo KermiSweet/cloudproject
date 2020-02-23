@@ -1,41 +1,44 @@
 package com.kermi.base.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.kermi.base.service.UserService;
 import com.kermi.common.pojo.User;
+import com.kermi.common.requestBody.RegiestBody;
 import entity.ResResult;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
-import io.swagger.annotations.ApiOperation;
+import entity.StatusCode;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(value = "UserController", description = "用户登入登出接口")
 @Slf4j
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
 
-    private Logger logger = LoggerFactory.getLogger(UserController.class);
-
     @Autowired
     private UserService userService;
 
-    @ApiOperation(value = "用户登录", notes = "用户登录接口")
-    @ApiImplicitParams({
-            @ApiImplicitParam(name = "email", value = "邮箱", required = true, dataType = "string"),
-            @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "string")
-    })
     @RequestMapping("/login")
-    @ResponseBody
-    public ResResult login(@RequestParam("email") String email,@RequestParam("pwd") String pwd) {
-        //TODO 用户登录
+    public ResResult login(@RequestParam(value = "email", required = false, defaultValue = "") String email,
+                           @RequestParam(value = "username",required = false, defaultValue = "") String username,
+                           @RequestParam(value = "pwd", required = true) String pwd) {
+        User user = userService.login(username, email, pwd);
+        if (user == null) {
+            //登录失败，用户名或密码不正确
+            return new ResResult(true, StatusCode.LOGINGERROR, "用户名或密码不正确");
+        }
+        //密码不能对外公开,返回时设置为空值
+        user.setPwd("");
+        String msg = JSONObject.toJSONString(user);
+        return new ResResult(true, StatusCode.OK, user.getName()+"登录成功", msg);
+    }
+
+    @RequestMapping("/regiest")
+    public ResResult regiest(@RequestBody RegiestBody regiestuser) {
+        // TODO 注册用户
         return null;
     }
 }
