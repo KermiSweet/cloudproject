@@ -21,9 +21,9 @@ public class UserController {
 
     @RequestMapping("/login")
     public ResResult login(@RequestParam(value = "email", required = false, defaultValue = "") String email,
-                           @RequestParam(value = "username",required = false, defaultValue = "") String username,
-                           @RequestParam(value = "pwd", required = true) String pwd){
-        boolean flag=false;
+                           @RequestParam(value = "username", required = false, defaultValue = "") String username,
+                           @RequestParam(value = "pwd", required = true) String pwd) {
+        boolean flag = false;
         if (username != null && !"".equals(username)) {
             flag = checkservice.nameExist(username);
         }
@@ -31,11 +31,14 @@ public class UserController {
             flag = checkservice.emailExist(email);
         }
         //flag为false的话两个都不存在，直接返回错误
-        if (!flag){
+        if (!flag) {
             return new ResResult(false, StatusCode.USERNAMEOREMAILNOTEXIST, "用户名或邮箱不存在");
         }
         return userservice.login(email, username, pwd);
     }
 
-    //TODO 服务连接失败
+    @RequestMapping("/getsessionid")
+    public String sessionId() {
+        return userservice.sessionId();
+    }
 }

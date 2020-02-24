@@ -43,7 +43,10 @@ public class UserServiceImpl implements UserService {
             user.setName(username);
             user.setPwd(pwd);
             //redis查询USERNAME_ID
-            id = Long.parseLong((String) redisUtil.hGet(REDIS_EMAIL_ID, username));
+            String stridfromredis = (String) redisUtil.hGet(REDIS_USERNAME_ID, username);
+            if (stridfromredis != null) {
+                id = Long.parseLong(stridfromredis);
+            }
             logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_GET_INFO + REDIS_EMAIL_ID + ":" + username);
             if (id == null) {
                 //id未查到的2中情况1. 用户不存在，2. 没有写入Redis数据库
@@ -69,7 +72,11 @@ public class UserServiceImpl implements UserService {
             user.setEmail(email);
             user.setPwd(pwd);
             //redis查询EMAIL_ID
-            id = Long.parseLong((String) redisUtil.hGet(REDIS_EMAIL_ID, email));
+            String stridfromredis = (String) redisUtil.hGet(REDIS_EMAIL_ID, email);
+            if (stridfromredis != null) {
+                id = Long.parseLong(stridfromredis);
+            }
+
             logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_GET_INFO + REDIS_EMAIL_ID + ":" + email);
             if (id == null) {
                 User chectuser = new User();

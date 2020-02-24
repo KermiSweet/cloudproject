@@ -11,6 +11,16 @@ server:
 spring:
   application:
     name: user-service
+  redis:
+    database: 0
+    host: 120.79.14.47
+    port: 6379
+    timeout: 5000
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        min-idle: 0
 feign:
   hystrix:
     enabled: false

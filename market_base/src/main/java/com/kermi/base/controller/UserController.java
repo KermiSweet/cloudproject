@@ -1,6 +1,7 @@
 package com.kermi.base.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.kermi.base.service.SessionService;
 import com.kermi.base.service.UserService;
 import com.kermi.common.pojo.User;
 import com.kermi.common.requestBody.RegiestBody;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import util.SessionAttributes;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Slf4j
 @RestController
@@ -21,10 +25,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private SessionService sessionService;
+
     @RequestMapping("/login")
     public ResResult login(@RequestParam(value = "email", required = false, defaultValue = "") String email,
                            @RequestParam(value = "username",required = false, defaultValue = "") String username,
-                           @RequestParam(value = "pwd", required = true) String pwd) {
+                           @RequestParam(value = "pwd", required = true) String pwd,
+                           HttpServletRequest request) {
         User user = userService.login(username, email, pwd);
         if (user == null) {
             //登录失败，用户名或密码不正确
@@ -33,12 +41,26 @@ public class UserController {
         //密码不能对外公开,返回时设置为空值
         user.setPwd("");
         String msg = JSONObject.toJSONString(user);
+        //登录成功Session存储
+        SessionAttributes attributes = new SessionAttributes(getSessionId(request), user);
+        sessionService.writeSessionAttributesToRedis(attributes);
         return new ResResult(true, StatusCode.OK, user.getName()+"登录成功", msg);
     }
 
     @RequestMapping("/regiest")
     public ResResult regiest(@RequestBody RegiestBody regiestuser) {
         // TODO 注册用户
+
         return null;
+    }
+
+    @RequestMapping("/getSessionId")
+    public String sessionId(HttpServletRequest request) {
+        return getSessionId(request);
+    }
+
+
+    public String getSessionId(HttpServletRequest request) {
+        return request.getSession().getId();
     }
 }
