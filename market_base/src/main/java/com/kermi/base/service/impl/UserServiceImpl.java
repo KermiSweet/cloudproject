@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User login(String username, String email, String pwd) {
-        if (validataIsEmpty(pwd)){
+        if (validataIsEmpty(pwd)) {
             //用户名为空，直接退出
             return null;
         }
@@ -43,12 +43,13 @@ public class UserServiceImpl implements UserService {
             user.setName(username);
             user.setPwd(pwd);
             //redis查询USERNAME_ID
-            id = (Long) redisUtil.hGet(REDIS_EMAIL_ID, username);
-            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_GET_INFO + REDIS_EMAIL_ID + username);
+            id = Long.parseLong((String) redisUtil.hGet(REDIS_EMAIL_ID, username));
+            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_GET_INFO + REDIS_EMAIL_ID + ":" + username);
             if (id == null) {
                 //id未查到的2中情况1. 用户不存在，2. 没有写入Redis数据库
                 //查询主数据库
-                User chectuser = new User(); chectuser.setName(username);
+                User chectuser = new User();
+                chectuser.setName(username);
                 chectuser = userMapper.selectSelective(chectuser);
                 if (chectuser == null) {
                     //数据库中不存在该用户
@@ -68,10 +69,11 @@ public class UserServiceImpl implements UserService {
             user.setEmail(email);
             user.setPwd(pwd);
             //redis查询EMAIL_ID
-            id = (Long) redisUtil.hGet(REDIS_EMAIL_ID, email);
-            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_GET_INFO + REDIS_EMAIL_ID + email);
+            id = Long.parseLong((String) redisUtil.hGet(REDIS_EMAIL_ID, email));
+            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_GET_INFO + REDIS_EMAIL_ID + ":" + email);
             if (id == null) {
-                User chectuser = new User(); chectuser.setEmail(email);
+                User chectuser = new User();
+                chectuser.setEmail(email);
                 chectuser = userMapper.selectSelective(chectuser);
                 if (chectuser == null) {
                     return null;
@@ -89,12 +91,17 @@ public class UserServiceImpl implements UserService {
         //Redis中放两份，一份是EMAIL_ID,一份是USERNAME_ID
         //id不为null时，从redis中根据id取出相应对象的json
         String outFromRedis = (String) redisUtil.hGet(REDIS_HASH_USER, String.valueOf(id));
+        User checkuser = new User();
         if (outFromRedis != null) {
-            return JSONObject.parseObject(outFromRedis, User.class);
+            checkuser =  JSONObject.parseObject(outFromRedis, User.class);
+            if (user.getPwd().equals(checkuser.getPwd())) {
+                return checkuser;
+            }
+            return null;
         }
 
         //Redis中没有查询到，转向主数据库
-        User checkuser = new User();
+
         checkuser = userMapper.selectSelective(user);
         if (checkuser == null) {
             //不存在此用户
@@ -125,20 +132,20 @@ public class UserServiceImpl implements UserService {
 
     public void saveUserToRedis(User u) {
         String jsonString = JSONObject.toJSONString(u);
-        if(redisUtil.hPutIfAbsent(REDIS_HASH_USER, String.valueOf(u.getId()), jsonString)){
-            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_SET_INFO + REDIS_HASH_USER + u.getId());
+        if (redisUtil.hPutIfAbsent(REDIS_HASH_USER, String.valueOf(u.getId()), jsonString)) {
+            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_SET_INFO + REDIS_HASH_USER + ":" + u.getId());
         }
     }
 
     public void saveUserNameIdToRedis(User u) {
         if (redisUtil.hPutIfAbsent(REDIS_USERNAME_ID, u.getName(), String.valueOf(u.getId()))) {
-            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_SET_INFO + REDIS_USERNAME_ID + u.getName());
+            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_SET_INFO + REDIS_USERNAME_ID + ":" + u.getName());
         }
     }
 
     public void saveEmailIdToRedis(User u) {
         if (redisUtil.hPutIfAbsent(REDIS_EMAIL_ID, u.getEmail(), String.valueOf(u.getId()))) {
-            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_SET_INFO + REDIS_EMAIL_ID + u.getEmail());
+            logger.info(new Exception().getStackTrace()[0].getMethodName() + "-" + REDIS_SET_INFO + REDIS_EMAIL_ID + ":" + u.getEmail());
         }
     }
 

@@ -11,3 +11,6 @@ server:
 spring:
   application:
     name: user-service
+feign:
+  hystrix:
+    enabled: false

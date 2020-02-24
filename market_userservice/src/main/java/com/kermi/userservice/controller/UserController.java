@@ -36,4 +36,6 @@ public class UserController {
         }
         return userservice.login(email, username, pwd);
     }
+
+    //TODO 服务连接失败
 }
