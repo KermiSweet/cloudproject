@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/requestBody/RegiestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/requestBody/RegiestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/DataCheckServiceFegin.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/DataCheckServiceFegin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" afterDir="false" />
     </list>
@@ -183,8 +179,8 @@
       <list>
         <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.MarketApplication" />
-        <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
+        <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="JUnit.RandomCodeTest.random" />
       </list>
     </recent_temporary>
@@ -234,7 +230,7 @@
       <workItem from="1582339420911" duration="23014000" />
       <workItem from="1582431176006" duration="18992000" />
       <workItem from="1582515860940" duration="19578000" />
-      <workItem from="1582606389770" duration="9793000" />
+      <workItem from="1582606389770" duration="11544000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -292,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582611762527</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="可用邮件进行注册,存在feign调用超时问题">
+      <created>1582616498768</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582616498768</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +333,8 @@
     <MESSAGE value="解决fegin调用超时问题，设置hystrix超时时间" />
     <MESSAGE value="解决feign中session不一致的问题" />
     <MESSAGE value="使用rabbitmq 进行邮件发送" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用rabbitmq 进行邮件发送" />
+    <MESSAGE value="可用邮件进行注册,存在feign调用超时问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="可用邮件进行注册,存在feign调用超时问题" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

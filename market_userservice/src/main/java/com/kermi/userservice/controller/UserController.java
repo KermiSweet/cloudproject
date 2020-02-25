@@ -45,7 +45,7 @@ public class UserController {
         if (checkservice.nameExist(body.getUsername()) || checkservice.emailExist(body.getEmail())) {
             return new ResResult(false, StatusCode.ERROR, "用户名或邮箱已经存在");
         }
-        //TODO feign结合 前端先自动进行一次请求，请求/user/resendCode 参数为email
+        //feign结合 前端先自动进行一次请求，请求/user/resendCode 参数为email
         if (body.getCode() == null || "".equals(body.getCode())) {
             //验证码为空
             return new ResResult(false, StatusCode.ERROR, "缺少验证码");

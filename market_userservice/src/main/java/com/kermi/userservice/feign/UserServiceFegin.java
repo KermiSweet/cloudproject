@@ -1,6 +1,7 @@
 package com.kermi.userservice.feign;
 
 import com.kermi.common.requestBody.RegiestBody;
+import com.kermi.userservice.feign.hystric.UserServiceHystric;
 import entity.ResResult;
 import org.bouncycastle.cert.ocsp.Req;
 import org.springframework.cloud.openfeign.FeignClient;
