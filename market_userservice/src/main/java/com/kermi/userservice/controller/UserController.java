@@ -6,10 +6,7 @@ import com.kermi.userservice.feign.UserServiceFegin;
 import entity.ResResult;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,7 +20,7 @@ public class UserController {
     @Autowired
     private UserServiceFegin userservice;
 
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResResult login(@RequestBody RegiestBody body) {
         boolean flag = false;
         if (body.getUsername() != null && !"".equals(body.getUsername())) {
@@ -39,7 +36,7 @@ public class UserController {
         return userservice.login(body);
     }
 
-    @RequestMapping("/regiest")
+    @RequestMapping(value = "/regiest", method = RequestMethod.POST)
     public ResResult regiest(@RequestBody RegiestBody body) {
         //先查看用户名和邮箱是否存在
         if (checkservice.nameExist(body.getUsername()) || checkservice.emailExist(body.getEmail())) {
@@ -57,6 +54,28 @@ public class UserController {
         }
         if (res == 1) {
             return userservice.regiest(body);
+        }
+        return new ResResult(false, StatusCode.ERROR, "验证码错误");
+    }
+
+    @RequestMapping(value = "/forgetpassword", method = RequestMethod.POST)
+    public ResResult forgetpassword(@RequestBody RegiestBody body) {
+        // TODO 忘记密码测试，编写重置密码
+        //先检查目标邮箱是否存在
+        if (!checkservice.emailExist(body.getEmail())) {
+            return new ResResult(false, StatusCode.ERROR, "邮箱不存在,请先注册");
+        }
+        //feign结合 前端先自动进行一次请求，请求/user/resendCode 参数为email
+        if (body.getCode() == null || "".equals(body.getCode())) {
+            //验证码为空
+            return new ResResult(false, StatusCode.ERROR, "缺少验证码");
+        }
+        int res = checkservice.codeCheck(body.getCode());
+        if (res == 2) {
+            return new ResResult(false, StatusCode.ERROR, "验证码已过期");
+        }
+        if (res == 1) {
+            return userservice.forgetPassword(body);
         }
         return new ResResult(false, StatusCode.ERROR, "验证码错误");
     }

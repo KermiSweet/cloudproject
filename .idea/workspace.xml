@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,9 +179,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.MarketApplication" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="JUnit.RandomCodeTest.random" />
       </list>
@@ -199,6 +201,11 @@
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8674c596" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@584fe52" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -230,7 +237,7 @@
       <workItem from="1582339420911" duration="23014000" />
       <workItem from="1582431176006" duration="18992000" />
       <workItem from="1582515860940" duration="19578000" />
-      <workItem from="1582606389770" duration="11544000" />
+      <workItem from="1582606389770" duration="23174000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -295,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582616498768</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="暂时关闭熔断器，解决超时问题">
+      <created>1582617989124</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582617989124</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +348,34 @@
     <MESSAGE value="解决feign中session不一致的问题" />
     <MESSAGE value="使用rabbitmq 进行邮件发送" />
     <MESSAGE value="可用邮件进行注册,存在feign调用超时问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="可用邮件进行注册,存在feign调用超时问题" />
+    <MESSAGE value="暂时关闭熔断器，解决超时问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="暂时关闭熔断器，解决超时问题" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
+          <line>201</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
+          <line>207</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
+          <line>208</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
 
     private String REDIS_GET_INFO = "查询Redis数据库:";
     private String REDIS_SET_INFO = "写入Redis数据库:";
+    private String REDIS_DELETE_INFO = "删除Redis中的值:";
 
     @Override
     public User login(String username, String email, String pwd) {
@@ -101,7 +102,7 @@ public class UserServiceImpl implements UserService {
         String outFromRedis = (String) redisUtil.hGet(REDIS_HASH_USER, String.valueOf(id));
         User checkuser = new User();
         if (outFromRedis != null) {
-            checkuser =  JSONObject.parseObject(outFromRedis, User.class);
+            checkuser = JSONObject.parseObject(outFromRedis, User.class);
             if (user.getPwd().equals(checkuser.getPwd())) {
                 return checkuser;
             }
@@ -139,6 +140,114 @@ public class UserServiceImpl implements UserService {
         return u;
     }
 
+    @Override
+    public boolean resetPassword(RegiestBody regiestBody) {
+        if (regiestBody.getPwd() == null) {
+            return false;
+        }
+        User u = new User();
+        u.setEmail(regiestBody.getEmail());
+        //先从缓冲中获取用户对象
+        Long id = null;
+        String methodName = new Exception().getStackTrace()[0].getMethodName();
+        String strid = null;
+        strid = (String) redisUtil.hGet(REDIS_EMAIL_ID, regiestBody.getEmail());
+        if (strid != null) {
+            id = Long.parseLong(strid);
+        }
+        if (id == null) {
+            logger.info(methodName + REDIS_GET_INFO + REDIS_EMAIL_ID + "faild");
+            u = userMapper.selectSelective(u);
+            id = u.getId();
+        }
+        String json = (String) redisUtil.hGet(REDIS_HASH_USER, String.valueOf(id));
+        if (json == null) {
+            logger.info(methodName + REDIS_GET_INFO + REDIS_HASH_USER + "faild");
+            u = userMapper.selectSelective(u);
+        }
+
+        if (u == null) {
+            //数据库中无法查找到改用户
+            return false;
+        }
+        u.setPwd(regiestBody.getPwd());
+        int res = userMapper.updateByPrimaryKeySelective(u);
+        if (res != 0) {
+            //从Redis缓存中删除原来的用户数据
+            redisUtil.hDelete(REDIS_HASH_USER, String.valueOf(u.getId()));
+            logger.info(new Exception().getStackTrace()[0].getMethodName() + REDIS_DELETE_INFO + REDIS_HASH_USER + "-" + u.getId());
+            //修改成功
+            return true;
+        }
+        //修改失败
+        return false;
+    }
+
+    @Override
+    public boolean changePwd(RegiestBody body, String oldPwd) {
+        if (body.getPwd() == null) {
+            //传入的新密码为空时
+            return false;
+        }
+        //从Redis里面去取id
+        Long id = null;
+        User u = new User();
+        User findfrommysql = null;
+        String strid = null;
+        strid = (String) redisUtil.hGet(REDIS_EMAIL_ID, body.getEmail());
+        if (strid != null) {
+            id = Long.parseLong(strid);
+        }
+
+        if (id == null) {
+            strid = (String) redisUtil.hGet(REDIS_USERNAME_ID, body.getUsername());
+            if (strid != null) {
+                id = Long.parseLong(strid);
+            }
+            if (id == null) {
+                findfrommysql = getFromMysqlBySelective(body, oldPwd);
+                if (findfrommysql == null) {
+                    return false;
+                }
+                redisUtil.hPutIfAbsent(REDIS_USERNAME_ID, findfrommysql.getName(), String.valueOf(findfrommysql.getId()));
+                saveUserNameIdToRedis(findfrommysql);
+                redisUtil.hPutIfAbsent(REDIS_EMAIL_ID, findfrommysql.getEmail(), String.valueOf(findfrommysql.getId()));
+                saveEmailIdToRedis(findfrommysql);
+            }
+        }
+        if (findfrommysql == null) {
+            //没有进入到查找主数据库
+            String json = (String) redisUtil.hGet(REDIS_HASH_USER, String.valueOf(id));
+            if (json == null) {
+                //Redis中没有该键值对,查找主数据库
+                findfrommysql = getFromMysqlBySelective(body, oldPwd);
+                if (findfrommysql == null) {
+                    return false;
+                }
+                saveUserToRedis(findfrommysql);
+            }
+
+            //Redis中取出的不为null
+            u = JSONObject.parseObject(json, User.class);
+            if (!oldPwd.equals(u.getPwd())) {
+                //原密码错误
+                return false;
+            }
+        } else {
+            u = findfrommysql;
+        }
+
+        //进入了主数据库查询,说明密码正确，不用再次检验
+        //修改用户密码
+        u.setPwd(body.getPwd());
+        redisUtil.hDelete(REDIS_HASH_USER, String.valueOf(u.getId()));
+        int res = userMapper.updateByPrimaryKeySelective(u);
+        if (res == 1) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * 判断字符是否为null或者为空
      *
@@ -171,5 +280,13 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    public User getFromMysqlBySelective(RegiestBody body, String oldpwd) {
+        User u = new User();
+        u.setEmail(body.getEmail());
+        u.setName(body.getUsername());
+        u.setPwd(oldpwd);
+        //顺带密码验证
+        return userMapper.selectSelective(u);
+    }
 
 }

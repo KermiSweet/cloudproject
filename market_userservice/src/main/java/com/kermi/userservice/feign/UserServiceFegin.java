@@ -22,7 +22,9 @@ public interface UserServiceFegin {
     @RequestMapping(value = "/api/user/sendCode", method = RequestMethod.GET)
     ResResult sendCode(@RequestParam("email") String email);
 
+    @RequestMapping(value = "/api/user/forgetpassword", method = RequestMethod.POST)
+    ResResult forgetPassword(@RequestBody RegiestBody body);
+
     @RequestMapping(value = "/api/user/getSessionId")
     String sessionId();
-
 }

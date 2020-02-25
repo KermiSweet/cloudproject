@@ -23,4 +23,18 @@ public interface UserService {
     User regiest(RegiestBody regiestBody);
 
 
+    /**
+     * 忘记密码重设密码
+     * @param regiestBody
+     * @return true or false
+     */
+    boolean resetPassword(RegiestBody regiestBody);
+
+    /**
+     * 修改密码
+     * @param body
+     * @param oldPwd
+     * @return true or false
+     */
+    boolean changePwd(RegiestBody body, String oldPwd);
 }

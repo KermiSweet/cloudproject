@@ -51,7 +51,7 @@ public class UserController {
         //进行邮箱验证
         //发送要发送的内容到消息队列中
         //保存当前的randomcode到缓存服务器用来等待验证
-        //TODO 在执行此控制器之前，先经过datacheck验证
+        //在执行此控制器之前，先经过datacheck验证
         //注册用户
         User regiest = userService.regiest(regiestuser);
         if (regiest == null) {
@@ -63,16 +63,34 @@ public class UserController {
         return new ResResult(true, StatusCode.OK, message, data);
     }
 
-    //test
-    @RequestMapping("/getSessionId")
-    public String sessionId(HttpServletRequest request) {
-        return getSessionId(request);
-    }
-
     @RequestMapping(value = "/sendCode", method = RequestMethod.GET)
     public ResResult sendCode(@RequestParam String email, HttpServletRequest request) {
         emailService.saveCodeToRedis(getSessionId(request), emailService.sendEmailToRbq(email));
         return new ResResult(true, StatusCode.OK, "发送成功");
+    }
+
+    @RequestMapping(value = "/forgetpassword", method = RequestMethod.POST)
+    public ResResult forgetpassword(@RequestBody RegiestBody body) {
+        boolean flag = userService.resetPassword(body);
+        if (flag){
+            return new ResResult(true, StatusCode.OK, "密码修改成功");
+        }
+        return new ResResult(false, StatusCode.ERROR, "密码修改失败");
+    }
+
+    @RequestMapping(value = "/changepassword", method = RequestMethod.POST)
+    public ResResult changepassword(@RequestBody RegiestBody body, @RequestParam("oldPwd") String oldPwd) {
+        boolean res = userService.changePwd(body, oldPwd);
+        if (res) {
+            return new ResResult(true, StatusCode.OK, "密码修改成功");
+        }
+        return new ResResult(false, StatusCode.ERROR, "密码修改失败");
+    }
+
+    //test
+    @RequestMapping("/getSessionId")
+    public String sessionId(HttpServletRequest request) {
+        return getSessionId(request);
     }
     //test
 
