@@ -1,6 +1,7 @@
 package com.kermi.base.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.kermi.base.service.EmailService;
 import com.kermi.base.service.SessionService;
 import com.kermi.base.service.UserService;
 import com.kermi.common.pojo.User;
@@ -9,10 +10,7 @@ import entity.ResResult;
 import entity.StatusCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import util.SessionAttributes;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,12 +26,13 @@ public class UserController {
     @Autowired
     private SessionService sessionService;
 
-    @RequestMapping("/login")
-    public ResResult login(@RequestParam(value = "email", required = false, defaultValue = "") String email,
-                           @RequestParam(value = "username",required = false, defaultValue = "") String username,
-                           @RequestParam(value = "pwd", required = true) String pwd,
+    @Autowired
+    private EmailService emailService;
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ResResult login(@RequestBody RegiestBody body,
                            HttpServletRequest request) {
-        User user = userService.login(username, email, pwd);
+        User user = userService.login(body.getUsername(), body.getEmail(), body.getPwd());
         if (user == null) {
             //登录失败，用户名或密码不正确
             return new ResResult(true, StatusCode.LOGINGERROR, "用户名或密码不正确");
@@ -44,21 +43,39 @@ public class UserController {
         //登录成功Session存储
         SessionAttributes attributes = new SessionAttributes(getSessionId(request), user);
         sessionService.writeSessionAttributesToRedis(attributes);
-        return new ResResult(true, StatusCode.OK, user.getName()+"登录成功", msg);
+        return new ResResult(true, StatusCode.OK, user.getName() + "登录成功", msg);
     }
 
-    @RequestMapping("/regiest")
-    public ResResult regiest(@RequestBody RegiestBody regiestuser) {
-        // TODO 注册用户
-
-        return null;
+    @RequestMapping(value = "/regiest", method = RequestMethod.POST)
+    public ResResult regiest(@RequestBody RegiestBody regiestuser, HttpServletRequest request) {
+        //进行邮箱验证
+        //发送要发送的内容到消息队列中
+        //保存当前的randomcode到缓存服务器用来等待验证
+        emailService.saveCodeToRedis(getSessionId(request), emailService.sendEmailToRbq(regiestuser.getEmail()));
+        //TODO 在执行此控制器之前，先经过datacheck验证
+        //注册用户
+        User regiest = userService.regiest(regiestuser);
+        if (regiest == null) {
+            return new ResResult(true, StatusCode.ERROR, "注册失败");
+        }
+        String message = regiest.getEmail() + "(" + regiest.getName() + ")" + "注册成功";
+        regiest.setPwd("");
+        String data = JSONObject.toJSONString(regiest);
+        return new ResResult(true, StatusCode.OK, message, data);
     }
 
+    //test
     @RequestMapping("/getSessionId")
     public String sessionId(HttpServletRequest request) {
         return getSessionId(request);
     }
 
+    @RequestMapping("/resendCode")
+    public ResResult sendCode(@RequestParam String email, HttpServletRequest request) {
+        emailService.saveCodeToRedis(getSessionId(request), emailService.sendEmailToRbq(email));
+        return new ResResult(true, StatusCode.OK, "发送成功");
+    }
+    //test
 
     public String getSessionId(HttpServletRequest request) {
         return request.getSession().getId();

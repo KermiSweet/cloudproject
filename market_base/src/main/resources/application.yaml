@@ -36,6 +36,9 @@ spring:
     maxOpenPreparedStatements: 20
   rabbitmq:
     host: 120.79.14.47
+    port: 5672
+    username: guest
+    password: guest
 # mybatis配置
 mybatis:
   mapper-locations: classpath:/mapper/**/*xml

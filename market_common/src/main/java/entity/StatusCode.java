@@ -16,4 +16,5 @@ public class StatusCode {
     public static final int REMOTEERROR = 20004;    //远程调用错误
     public static final int REPERROR = 20005;       //重复操作
     public static final int USERNAMEOREMAILNOTEXIST = 40000;    //用户名或者邮箱不存在
+    public static final int UNKNOWSERVICEERROR = 50000; //服务器未知错误
 }

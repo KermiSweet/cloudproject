@@ -2,12 +2,13 @@ package com.kermi.datacheck.controller;
 
 import com.kermi.datacheck.service.UserCheckService;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 @RequestMapping("/api/user/check")
@@ -25,6 +26,15 @@ public class UserCheckController {
     @RequestMapping(value = "/username", method = RequestMethod.GET)
     public boolean nameExist(@RequestParam("username") String username) {
         return checkService.nameExist(username);
+    }
+
+    @RequestMapping(value = "/codeCheck", method = RequestMethod.GET)
+    public int codeCheck(@RequestParam("code") String code, HttpServletRequest request) {
+        return checkService.codeCheck(getSessionId(request), code);
+    }
+
+    public String getSessionId(HttpServletRequest request) {
+        return request.getSession().getId();
     }
 
 }

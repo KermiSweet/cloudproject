@@ -1,3 +1,4 @@
+
 # eureka配置
 eureka:
   client:
@@ -10,3 +11,7 @@ eureka:
 spring:
   rabbitmq:
     host: 120.79.14.47
+  application:
+    name: emailsend-server
+server:
+  port: 8083

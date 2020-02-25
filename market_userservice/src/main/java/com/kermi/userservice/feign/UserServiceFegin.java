@@ -1,8 +1,10 @@
 package com.kermi.userservice.feign;
 
+import com.kermi.common.requestBody.RegiestBody;
 import entity.ResResult;
 import org.bouncycastle.cert.ocsp.Req;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,10 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "market-base")
 public interface UserServiceFegin {
 
-    @RequestMapping(value = "/api/user/login", method = RequestMethod.GET)
-    ResResult login(@RequestParam(value = "email", required = false, defaultValue = "") String email,
-                    @RequestParam(value = "username", required = false, defaultValue = "") String username,
-                    @RequestParam(value = "pwd", required = true) String pwd);
+    @RequestMapping(value = "/api/user/login", method = RequestMethod.POST)
+    ResResult login(@RequestBody RegiestBody body);
 
     @RequestMapping(value = "/api/user/getSessionId", method = RequestMethod.GET)
     String sessionId();

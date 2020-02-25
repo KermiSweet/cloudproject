@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import util.RedisUtil;
 import util.SessionAttributes;
 
+import java.util.concurrent.TimeUnit;
+
 @Service
 public class SessionServiceImpl implements SessionService {
 
@@ -25,6 +27,7 @@ public class SessionServiceImpl implements SessionService {
     @Override
     public void writeSessionAttributesToRedis(SessionAttributes attributes) {
         redisUtil.set(SESSION_REDIS_PREFIX + attributes.getSessionId(), JSONObject.toJSONString(attributes));
+        redisUtil.expire(SESSION_REDIS_PREFIX+attributes.getSessionId(), 30, TimeUnit.MINUTES);
         logger.info(new Exception().getStackTrace()[0].getMethodName() + ":" + REDIS_SET_INFO + ":" + attributes.getSessionId());
     }
 

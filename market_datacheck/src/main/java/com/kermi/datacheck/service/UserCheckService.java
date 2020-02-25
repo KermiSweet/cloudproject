@@ -18,4 +18,12 @@ public interface UserCheckService {
      * @return true or false
      */
     public boolean nameExist(String username);
+
+    /**
+     * 验证邮箱验证码是否正确
+     * @param sessionId
+     * @param code
+     * @return 0(错误),1(正确),3(超时)
+     */
+    int codeCheck(String sessionId, String code);
 }

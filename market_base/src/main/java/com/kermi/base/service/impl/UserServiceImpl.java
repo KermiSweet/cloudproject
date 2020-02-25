@@ -4,15 +4,13 @@ import com.alibaba.fastjson.JSONObject;
 import com.kermi.base.service.UserService;
 import com.kermi.common.mapper.UserMapper;
 import com.kermi.common.pojo.User;
+import com.kermi.common.requestBody.RegiestBody;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import util.IdWorker;
 import util.RedisUtil;
-
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -23,6 +21,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private RedisUtil redisUtil;
+
+    @Autowired
+    private IdWorker idWorker;
 
     private String REDIS_EMAIL_ID = "EMAIL_ID";
     private String REDIS_USERNAME_ID = "USERNAME_ID";
@@ -122,6 +123,20 @@ public class UserServiceImpl implements UserService {
         }
 
         return null;
+    }
+
+    @Override
+    public User regiest(RegiestBody regiestBody) {
+        //由regiestBody对象转换成pojo类User
+        User u = new User(idWorker.nextId(), regiestBody.getUsername(), regiestBody.getEmail(), regiestBody.getPwd());
+        //写入主Mysql数据库
+        int insert = userMapper.insert(u);
+        if (insert != 1) {
+            //插入失败,事务关闭
+            return null;
+        }
+        //插入成功，写入缓存数据库USERNAMESET,EMAILSET,USER_HASH(主数据库插入成功后,登录的时候会自动写入)
+        return u;
     }
 
     /**

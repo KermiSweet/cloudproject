@@ -2,17 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/SessionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/SessionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/util/SessionAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/config/RedisSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/config/intercepter/FeignRequestIntercepter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/EmailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/util/VerifyCodeUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/test/java/RandomCodeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/config/RedisSessionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/src/main/java/com/kermi/mailsend/rabbitmq/MailCostomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/src/main/java/com/kermi/mailsend/util/MailSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/SessionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/requestBody/RegiestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/requestBody/RegiestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/util/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/UserCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/UserCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/UserCheckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/impl/UserCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/service/impl/UserCheckServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_mailsend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_mailsend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_mailsend/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_mailsend/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" afterDir="false" />
@@ -82,6 +94,7 @@
       <recent name="entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kermi.datacheck.config" />
       <recent name="com.kermi.common.config" />
       <recent name="com.kermi.base.config" />
     </key>
@@ -114,7 +127,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
+  <component name="RunManager" selected="Spring Boot.MailSendApplication">
+    <configuration name="RandomCodeTest.random" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="market_common" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RandomCodeTest" />
+      <option name="METHOD_NAME" value="random" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataCheckApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="market_datacheck" />
       <extension name="coverage">
@@ -141,9 +164,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GoodsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="market_goods" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.marketgoods.GoodsApplication" />
+    <configuration name="MailSendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_mailsend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.mailsend.MailSendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,13 +180,6 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.base.MarketApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShoppingCarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="market_shoppingcar" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.shoppingcar.ShoppingCarApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -183,10 +199,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserServiceApplication" />
         <item itemvalue="Spring Boot.MarketApplication" />
         <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
+        <item itemvalue="JUnit.RandomCodeTest.random" />
+        <item itemvalue="Spring Boot.UserServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -198,12 +215,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@de4053f7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@de4053f7" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@9b98645d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8674c596" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b586156c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -234,7 +256,8 @@
       <workItem from="1582268279258" duration="3408000" />
       <workItem from="1582339420911" duration="23014000" />
       <workItem from="1582431176006" duration="18992000" />
-      <workItem from="1582515860940" duration="8941000" />
+      <workItem from="1582515860940" duration="19578000" />
+      <workItem from="1582606389770" duration="5300000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -278,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582516812456</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="解决feign中session不一致的问题">
+      <created>1582529795286</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582529795286</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +344,8 @@
     <MESSAGE value="datacheck add" />
     <MESSAGE value="market_base redis无法连接" />
     <MESSAGE value="解决fegin调用超时问题，设置hystrix超时时间" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决fegin调用超时问题，设置hystrix超时时间" />
+    <MESSAGE value="解决feign中session不一致的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决feign中session不一致的问题" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />
