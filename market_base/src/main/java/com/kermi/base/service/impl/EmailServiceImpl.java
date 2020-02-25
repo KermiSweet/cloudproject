@@ -40,6 +40,9 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void saveCodeToRedis(String sessionId, String randomcode) {
+        if (redisUtil.get(REDIS_EMAIL_CODE_PREFIX + sessionId) != null) {
+            redisUtil.delete(REDIS_EMAIL_CODE_PREFIX + sessionId);
+        }
         redisUtil.set(REDIS_EMAIL_CODE_PREFIX + sessionId, randomcode);
         //设置过期时间
         redisUtil.expire(REDIS_EMAIL_CODE_PREFIX + sessionId, 5, TimeUnit.MINUTES);

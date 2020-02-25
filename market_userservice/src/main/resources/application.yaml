@@ -21,8 +21,22 @@ spring:
         max-active: 8
         max-wait: -1
         min-idle: 0
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
 feign:
   hystrix:
-    enabled: false
+    enabled: true
   httpclient:
     enabled: true
+  okhttp:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000

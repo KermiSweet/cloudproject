@@ -33,6 +33,12 @@ public class UserCheckController {
         return checkService.codeCheck(getSessionId(request), code);
     }
 
+    //test
+    @RequestMapping(value = "/getSessionId")
+    public String sessionid(HttpServletRequest request) {
+        return getSessionId(request);
+    }
+
     public String getSessionId(HttpServletRequest request) {
         return request.getSession().getId();
     }

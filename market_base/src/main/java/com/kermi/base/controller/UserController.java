@@ -51,7 +51,6 @@ public class UserController {
         //进行邮箱验证
         //发送要发送的内容到消息队列中
         //保存当前的randomcode到缓存服务器用来等待验证
-        emailService.saveCodeToRedis(getSessionId(request), emailService.sendEmailToRbq(regiestuser.getEmail()));
         //TODO 在执行此控制器之前，先经过datacheck验证
         //注册用户
         User regiest = userService.regiest(regiestuser);
@@ -70,7 +69,7 @@ public class UserController {
         return getSessionId(request);
     }
 
-    @RequestMapping("/resendCode")
+    @RequestMapping(value = "/sendCode", method = RequestMethod.GET)
     public ResResult sendCode(@RequestParam String email, HttpServletRequest request) {
         emailService.saveCodeToRedis(getSessionId(request), emailService.sendEmailToRbq(email));
         return new ResResult(true, StatusCode.OK, "发送成功");

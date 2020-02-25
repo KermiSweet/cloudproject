@@ -13,4 +13,10 @@ public interface DataCheckServiceFegin {
 
     @RequestMapping(value = "/api/user/check/username", method = RequestMethod.GET)
     boolean nameExist(@RequestParam("username") String username);
+
+    @RequestMapping(value = "/api/user/check/codeCheck", method = RequestMethod.GET)
+    int codeCheck(@RequestParam("code") String code);
+
+    @RequestMapping(value = "/api/user/check/getSessionId")
+    String sessionId();
 }

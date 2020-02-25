@@ -14,4 +14,6 @@ public class RegiestBody {
     private String email;
     /*密码*/
     private String pwd;
+    /*邮箱验证时的验证码*/
+    private String code;
 }

@@ -15,6 +15,13 @@ public interface UserServiceFegin {
     @RequestMapping(value = "/api/user/login", method = RequestMethod.POST)
     ResResult login(@RequestBody RegiestBody body);
 
-    @RequestMapping(value = "/api/user/getSessionId", method = RequestMethod.GET)
+    @RequestMapping(value = "/api/user/regiest", method = RequestMethod.POST)
+    ResResult regiest(@RequestBody RegiestBody body);
+
+    @RequestMapping(value = "/api/user/sendCode", method = RequestMethod.GET)
+    ResResult sendCode(@RequestParam("email") String email);
+
+    @RequestMapping(value = "/api/user/getSessionId")
     String sessionId();
+
 }
