@@ -37,4 +37,10 @@ public interface UserService {
      * @return true or false
      */
     boolean changePwd(RegiestBody body, String oldPwd);
+
+    /**
+     * 退出登录
+     * @param sessionId
+     */
+    void logout(String sessionId);
 }

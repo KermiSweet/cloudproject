@@ -1,4 +1,4 @@
-package com.kermi.userservice.config.intercepter;
+package com.kermi.base.config.intercepter;
 
 import feign.RequestInterceptor;
 import feign.RequestTemplate;

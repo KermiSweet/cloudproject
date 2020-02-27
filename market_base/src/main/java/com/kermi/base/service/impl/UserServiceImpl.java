@@ -28,6 +28,7 @@ public class UserServiceImpl implements UserService {
     private String REDIS_EMAIL_ID = "EMAIL_ID";
     private String REDIS_USERNAME_ID = "USERNAME_ID";
     private String REDIS_HASH_USER = "USER_HASH";
+    private String REDIS_SESSION_PREFIX = "SESSION_";
 
     private String REDIS_GET_INFO = "查询Redis数据库:";
     private String REDIS_SET_INFO = "写入Redis数据库:";
@@ -117,7 +118,7 @@ public class UserServiceImpl implements UserService {
             return null;
         }
         //查询到对象，存入redis数据库
-        saveUserToRedis(user);
+        saveUserToRedis(checkuser);
         //验证对象
         if (user.getPwd().equals(checkuser.getPwd())) {
             return checkuser;
@@ -164,6 +165,8 @@ public class UserServiceImpl implements UserService {
         if (json == null) {
             logger.info(methodName + REDIS_GET_INFO + REDIS_HASH_USER + "faild");
             u = userMapper.selectSelective(u);
+        } else {
+            u = JSONObject.parseObject(json, User.class);
         }
 
         if (u == null) {
@@ -225,10 +228,12 @@ public class UserServiceImpl implements UserService {
                     return false;
                 }
                 saveUserToRedis(findfrommysql);
+                u = findfrommysql;
+            } else {
+                u = JSONObject.parseObject(json, User.class);
             }
 
             //Redis中取出的不为null
-            u = JSONObject.parseObject(json, User.class);
             if (!oldPwd.equals(u.getPwd())) {
                 //原密码错误
                 return false;
@@ -247,6 +252,13 @@ public class UserServiceImpl implements UserService {
         }
         return false;
     }
+
+    @Override
+    public void logout(String sessionId) {
+        redisUtil.delete(REDIS_SESSION_PREFIX + sessionId);
+        logger.info(new Exception().getStackTrace()[0].getMethodName() + REDIS_DELETE_INFO + REDIS_SESSION_PREFIX + sessionId);
+    }
+
 
     /**
      * 判断字符是否为null或者为空

@@ -2,19 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/config/intercepter/FeignRequestIntercepter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/feign/DataCheckFegin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/feign/hystrix/DataCheckFeignHystirx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/market_userservice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/config/RedisSessionConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/config/intercepter/FeignRequestIntercepter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/DataCheckServiceFegin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cloudproject" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,6 +140,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="configserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.configserver.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DataCheckApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="market_datacheck" />
       <extension name="coverage">
@@ -144,6 +173,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GoodsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_goods" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.marketgoods.GoodsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MailSendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="market_mailsend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.mailsend.MailSendApplication" />
@@ -164,6 +200,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShoppingCarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_shoppingcar" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.shoppingcar.ShoppingCarApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="market_userservice" />
       <extension name="coverage">
@@ -177,12 +220,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zuulmodel" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.zuulmodel.ZuulApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MarketApplication" />
+        <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
         <item itemvalue="Spring Boot.UserServiceApplication" />
-        <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="JUnit.RandomCodeTest.random" />
       </list>
     </recent_temporary>
@@ -195,17 +245,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f198eb6b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@8674c596" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f198eb6b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@65854e4c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@18435c2a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@584fe52" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f198eb6b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d56c6016" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -237,7 +287,9 @@
       <workItem from="1582339420911" duration="23014000" />
       <workItem from="1582431176006" duration="18992000" />
       <workItem from="1582515860940" duration="19578000" />
-      <workItem from="1582606389770" duration="23174000" />
+      <workItem from="1582606389770" duration="23326000" />
+      <workItem from="1582701470094" duration="6476000" />
+      <workItem from="1582769896712" duration="5507000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -309,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582617989124</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="基础服务重置密码，忘记密码编写完成，准备用feign整合到邮件系统">
+      <created>1582637752849</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582637752849</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,33 +408,8 @@
     <MESSAGE value="使用rabbitmq 进行邮件发送" />
     <MESSAGE value="可用邮件进行注册,存在feign调用超时问题" />
     <MESSAGE value="暂时关闭熔断器，解决超时问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="暂时关闭熔断器，解决超时问题" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
-          <line>201</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
-          <line>203</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
-          <line>207</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java</url>
-          <line>208</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="基础服务重置密码，忘记密码编写完成，准备用feign整合到邮件系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="基础服务重置密码，忘记密码编写完成，准备用feign整合到邮件系统" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

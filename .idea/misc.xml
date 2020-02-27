@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/goodsserver/pom.xml" />
         <option value="$PROJECT_DIR$/market_loginservice/pom.xml" />
+        <option value="$PROJECT_DIR$/market_userservice/pom.xml" />
         <option value="$PROJECT_DIR$/userservice/pom.xml" />
         <option value="$PROJECT_DIR$/zuulModel/pom.xml" />
       </set>

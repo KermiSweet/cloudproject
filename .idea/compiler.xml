@@ -12,7 +12,6 @@
         <module name="market_mailsend" />
         <module name="zuulmodel" />
         <module name="market_goods" />
-        <module name="market_userservice" />
         <module name="configserver" />
         <module name="eurekaserver" />
         <module name="market_shoppingcar" />
@@ -24,6 +23,7 @@
       <module name="eureka-server" target="1.8" />
       <module name="goodsserver" target="1.8" />
       <module name="market_loginservice" target="1.8" />
+      <module name="market_userservice" target="1.8" />
       <module name="userservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
