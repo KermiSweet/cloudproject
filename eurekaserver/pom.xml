@@ -19,6 +19,7 @@
             <version>2.2.1.RELEASE</version>
         </dependency>
 
+        <!--spring-cloud-config-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>

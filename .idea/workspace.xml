@@ -2,32 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/config/intercepter/FeignRequestIntercepter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/feign/DataCheckFegin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/feign/hystrix/DataCheckFeignHystirx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_base/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_mailsend/src/main/resources/bootstrap.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/target/classes/application.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/market_base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/MarketApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/entity/StatusCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_base/src/main/resources/application.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/market_datacheck/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/market_userservice.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/UserServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/config/RedisSessionConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/config/intercepter/FeignRequestIntercepter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/DataCheckServiceFegin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/UserServiceFegin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/java/com/kermi/userservice/feign/hystric/UserServiceHystric.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_userservice/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_datacheck/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_mailsend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_mailsend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_mailsend/src/main/resources/application.yaml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MailSendApplication">
+  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
     <configuration name="RandomCodeTest.random" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="market_common" />
       <option name="PACKAGE_NAME" value="" />
@@ -250,7 +237,12 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f198eb6b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@65854e4c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@3d75f46a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f198eb6b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b7cd56e5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -289,7 +281,7 @@
       <workItem from="1582515860940" duration="19578000" />
       <workItem from="1582606389770" duration="23326000" />
       <workItem from="1582701470094" duration="6476000" />
-      <workItem from="1582769896712" duration="5507000" />
+      <workItem from="1582769896712" duration="6531000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -368,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582637752849</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="删除模块userservice,改market_base为用户主模块，减少feign之间的调用，解决超时问题，测试数据库改为本地数据库">
+      <created>1582775976470</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582775976470</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +408,8 @@
     <MESSAGE value="可用邮件进行注册,存在feign调用超时问题" />
     <MESSAGE value="暂时关闭熔断器，解决超时问题" />
     <MESSAGE value="基础服务重置密码，忘记密码编写完成，准备用feign整合到邮件系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="基础服务重置密码，忘记密码编写完成，准备用feign整合到邮件系统" />
+    <MESSAGE value="删除模块userservice,改market_base为用户主模块，减少feign之间的调用，解决超时问题，测试数据库改为本地数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除模块userservice,改market_base为用户主模块，减少feign之间的调用，解决超时问题，测试数据库改为本地数据库" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />
