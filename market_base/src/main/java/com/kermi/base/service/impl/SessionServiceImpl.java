@@ -16,7 +16,7 @@ public class SessionServiceImpl implements SessionService {
 
     private Logger logger = LoggerFactory.getLogger(SessionService.class);
 
-    private String SESSION_REDIS_PREFIX = "SESSION_";
+    private String REDIS_SESSION_PREFIX = "SESSION_";
 
     private String REDIS_GET_INFO = "查询Redis数据库:";
     private String REDIS_SET_INFO = "写入Redis数据库:";
@@ -26,18 +26,18 @@ public class SessionServiceImpl implements SessionService {
 
     @Override
     public void writeSessionAttributesToRedis(SessionAttributes attributes) {
-        redisUtil.set(SESSION_REDIS_PREFIX + attributes.getSessionId(), JSONObject.toJSONString(attributes));
-        redisUtil.expire(SESSION_REDIS_PREFIX+attributes.getSessionId(), 30, TimeUnit.MINUTES);
+        redisUtil.set(REDIS_SESSION_PREFIX + attributes.getSessionId(), JSONObject.toJSONString(attributes));
+        redisUtil.expire(REDIS_SESSION_PREFIX + attributes.getSessionId(), 30, TimeUnit.MINUTES);
         logger.info(new Exception().getStackTrace()[0].getMethodName() + ":" + REDIS_SET_INFO + ":" + attributes.getSessionId());
     }
 
     @Override
     public SessionAttributes getSessionAttributesFromRedis(String sessionID) {
-        String sessionAttributes = redisUtil.get(SESSION_REDIS_PREFIX + sessionID);
+        String sessionAttributes = redisUtil.get(REDIS_SESSION_PREFIX + sessionID);
         String methodName = new Exception().getStackTrace()[0].getMethodName();
-        logger.info(methodName + REDIS_GET_INFO + ":" + SESSION_REDIS_PREFIX + sessionID);
+        logger.info(methodName + REDIS_GET_INFO + ":" + REDIS_SESSION_PREFIX + sessionID);
         if (sessionAttributes != null) {
-            logger.info(methodName + REDIS_GET_INFO + ":" + SESSION_REDIS_PREFIX + sessionID + "OK");
+            logger.info(methodName + REDIS_GET_INFO + ":" + REDIS_SESSION_PREFIX + sessionID + "OK");
             return JSONObject.parseObject(sessionAttributes, SessionAttributes.class);
         }
         return null;

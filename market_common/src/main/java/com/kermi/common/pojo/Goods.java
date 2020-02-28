@@ -1,12 +1,5 @@
 package com.kermi.common.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class Goods {
     private Long id;
 
@@ -19,6 +12,8 @@ public class Goods {
     private String gpicture;
 
     private Long goodstypeId;
+
+    private Long businessId;
 
     public Long getId() {
         return id;
@@ -66,5 +61,13 @@ public class Goods {
 
     public void setGoodstypeId(Long goodstypeId) {
         this.goodstypeId = goodstypeId;
+    }
+
+    public Long getBusinessId() {
+        return businessId;
+    }
+
+    public void setBusinessId(Long businessId) {
+        this.businessId = businessId;
     }
 }

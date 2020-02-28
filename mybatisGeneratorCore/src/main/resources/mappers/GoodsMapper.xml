@@ -8,6 +8,232 @@
     <result column="gstore" jdbcType="INTEGER" property="gstore" />
     <result column="gpicture" jdbcType="VARCHAR" property="gpicture" />
     <result column="goodstype_id" jdbcType="BIGINT" property="goodstypeId" />
+    <result column="business_id" jdbcType="BIGINT" property="businessId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, gname, goprice, gstore, gpicture, goodstype_id, business_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goodstable
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from goodstable
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.generate.pojo.Goods">
+    insert into goodstable (id, gname, goprice, 
+      gstore, gpicture, goodstype_id, 
+      business_id)
+    values (#{id,jdbcType=BIGINT}, #{gname,jdbcType=VARCHAR}, #{goprice,jdbcType=DOUBLE}, 
+      #{gstore,jdbcType=INTEGER}, #{gpicture,jdbcType=VARCHAR}, #{goodstypeId,jdbcType=BIGINT}, 
+      #{businessId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.generate.pojo.Goods">
+    insert into goodstable
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="gname != null">
+        gname,
+      </if>
+      <if test="goprice != null">
+        goprice,
+      </if>
+      <if test="gstore != null">
+        gstore,
+      </if>
+      <if test="gpicture != null">
+        gpicture,
+      </if>
+      <if test="goodstypeId != null">
+        goodstype_id,
+      </if>
+      <if test="businessId != null">
+        business_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="gname != null">
+        #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="goprice != null">
+        #{goprice,jdbcType=DOUBLE},
+      </if>
+      <if test="gstore != null">
+        #{gstore,jdbcType=INTEGER},
+      </if>
+      <if test="gpicture != null">
+        #{gpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodstypeId != null">
+        #{goodstypeId,jdbcType=BIGINT},
+      </if>
+      <if test="businessId != null">
+        #{businessId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.generate.pojo.Goods">
+    update goodstable
+    <set>
+      <if test="gname != null">
+        gname = #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="goprice != null">
+        goprice = #{goprice,jdbcType=DOUBLE},
+      </if>
+      <if test="gstore != null">
+        gstore = #{gstore,jdbcType=INTEGER},
+      </if>
+      <if test="gpicture != null">
+        gpicture = #{gpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodstypeId != null">
+        goodstype_id = #{goodstypeId,jdbcType=BIGINT},
+      </if>
+      <if test="businessId != null">
+        business_id = #{businessId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.generate.pojo.Goods">
+    update goodstable
+    set gname = #{gname,jdbcType=VARCHAR},
+      goprice = #{goprice,jdbcType=DOUBLE},
+      gstore = #{gstore,jdbcType=INTEGER},
+      gpicture = #{gpicture,jdbcType=VARCHAR},
+      goodstype_id = #{goodstypeId,jdbcType=BIGINT},
+      business_id = #{businessId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.generate.pojo.Goods">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="gname" jdbcType="VARCHAR" property="gname" />
+    <result column="goprice" jdbcType="DOUBLE" property="goprice" />
+    <result column="gstore" jdbcType="INTEGER" property="gstore" />
+    <result column="gpicture" jdbcType="VARCHAR" property="gpicture" />
+    <result column="goodstype_id" jdbcType="BIGINT" property="goodstypeId" />
+    <result column="business_id" jdbcType="BIGINT" property="businessId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, gname, goprice, gstore, gpicture, goodstype_id, business_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from goodstable
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from goodstable
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.generate.pojo.Goods">
+    insert into goodstable (id, gname, goprice, 
+      gstore, gpicture, goodstype_id, 
+      business_id)
+    values (#{id,jdbcType=BIGINT}, #{gname,jdbcType=VARCHAR}, #{goprice,jdbcType=DOUBLE}, 
+      #{gstore,jdbcType=INTEGER}, #{gpicture,jdbcType=VARCHAR}, #{goodstypeId,jdbcType=BIGINT}, 
+      #{businessId,jdbcType=BIGINT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.generate.pojo.Goods">
+    insert into goodstable
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="gname != null">
+        gname,
+      </if>
+      <if test="goprice != null">
+        goprice,
+      </if>
+      <if test="gstore != null">
+        gstore,
+      </if>
+      <if test="gpicture != null">
+        gpicture,
+      </if>
+      <if test="goodstypeId != null">
+        goodstype_id,
+      </if>
+      <if test="businessId != null">
+        business_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="gname != null">
+        #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="goprice != null">
+        #{goprice,jdbcType=DOUBLE},
+      </if>
+      <if test="gstore != null">
+        #{gstore,jdbcType=INTEGER},
+      </if>
+      <if test="gpicture != null">
+        #{gpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodstypeId != null">
+        #{goodstypeId,jdbcType=BIGINT},
+      </if>
+      <if test="businessId != null">
+        #{businessId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.generate.pojo.Goods">
+    update goodstable
+    <set>
+      <if test="gname != null">
+        gname = #{gname,jdbcType=VARCHAR},
+      </if>
+      <if test="goprice != null">
+        goprice = #{goprice,jdbcType=DOUBLE},
+      </if>
+      <if test="gstore != null">
+        gstore = #{gstore,jdbcType=INTEGER},
+      </if>
+      <if test="gpicture != null">
+        gpicture = #{gpicture,jdbcType=VARCHAR},
+      </if>
+      <if test="goodstypeId != null">
+        goodstype_id = #{goodstypeId,jdbcType=BIGINT},
+      </if>
+      <if test="businessId != null">
+        business_id = #{businessId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.generate.pojo.Goods">
+    update goodstable
+    set gname = #{gname,jdbcType=VARCHAR},
+      goprice = #{goprice,jdbcType=DOUBLE},
+      gstore = #{gstore,jdbcType=INTEGER},
+      gpicture = #{gpicture,jdbcType=VARCHAR},
+      goodstype_id = #{goodstypeId,jdbcType=BIGINT},
+      business_id = #{businessId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <resultMap id="BaseResultMap" type="com.generate.pojo.Goods">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="gname" jdbcType="VARCHAR" property="gname" />
+    <result column="goprice" jdbcType="DOUBLE" property="goprice" />
+    <result column="gstore" jdbcType="INTEGER" property="gstore" />
+    <result column="gpicture" jdbcType="VARCHAR" property="gpicture" />
+    <result column="goodstype_id" jdbcType="BIGINT" property="goodstypeId" />
   </resultMap>
   <sql id="Base_Column_List">
     id, gname, goprice, gstore, gpicture, goodstype_id

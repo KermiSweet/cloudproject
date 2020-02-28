@@ -55,7 +55,7 @@
         </javaClientGenerator>
 
         <!--数据库表-->
-        <table tableName="adminTable" domainObjectName="Admin"
+        <table tableName="admintable" domainObjectName="Admin"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" >
             <property name="useActualColumnNames" value="false"/>
@@ -99,6 +99,10 @@
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" >
             <property name="useActualColumnNames" value="false"/>
+        </table>
+        <table tableName="business" domainObjectName="Business"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
         </table>
     </context>
 </generatorConfiguration>

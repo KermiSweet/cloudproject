@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kermi.common.mapper.ShoppingCarMapper">
+  <resultMap id="BaseResultMap" type="com.kermi.common.pojo.ShoppingCar">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="usertable_id" jdbcType="BIGINT" property="usertableId" />
+    <result column="goodstable_id" jdbcType="BIGINT" property="goodstableId" />
+    <result column="shoppingnum" jdbcType="INTEGER" property="shoppingnum" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, usertable_id, goodstable_id, shoppingnum
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from cartable
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from cartable
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.kermi.common.pojo.ShoppingCar">
+    insert into cartable (id, usertable_id, goodstable_id, 
+      shoppingnum)
+    values (#{id,jdbcType=BIGINT}, #{usertableId,jdbcType=BIGINT}, #{goodstableId,jdbcType=BIGINT}, 
+      #{shoppingnum,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.kermi.common.pojo.ShoppingCar">
+    insert into cartable
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="usertableId != null">
+        usertable_id,
+      </if>
+      <if test="goodstableId != null">
+        goodstable_id,
+      </if>
+      <if test="shoppingnum != null">
+        shoppingnum,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="usertableId != null">
+        #{usertableId,jdbcType=BIGINT},
+      </if>
+      <if test="goodstableId != null">
+        #{goodstableId,jdbcType=BIGINT},
+      </if>
+      <if test="shoppingnum != null">
+        #{shoppingnum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.kermi.common.pojo.ShoppingCar">
+    update cartable
+    <set>
+      <if test="usertableId != null">
+        usertable_id = #{usertableId,jdbcType=BIGINT},
+      </if>
+      <if test="goodstableId != null">
+        goodstable_id = #{goodstableId,jdbcType=BIGINT},
+      </if>
+      <if test="shoppingnum != null">
+        shoppingnum = #{shoppingnum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.kermi.common.pojo.ShoppingCar">
+    update cartable
+    set usertable_id = #{usertableId,jdbcType=BIGINT},
+      goodstable_id = #{goodstableId,jdbcType=BIGINT},
+      shoppingnum = #{shoppingnum,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.Long">
+    select
+    <include refid="Base_Column_List"/>
+    from cartable
+    where usertable_id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>
