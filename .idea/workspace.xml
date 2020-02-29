@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/exception/ExceptionSeverity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/GoodsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/GoodsCheckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/config/RedisSessionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/config/RedisTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/utils/ShoppingcarGetPrice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/ShoppingCarMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/ShoppingCarMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/src/main/resources/mapper/ShoppingCarMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/ShoppingCarMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_shoppingcar/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/ShoppingcarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/ShoppingcarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/test/java/JSONObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/test/java/JSONObjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/FocusMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsTypeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/NoticeMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderBaseMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderDetailMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/ShoppingCarMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/UserMapper.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,8 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -275,22 +261,7 @@
       <serviceView>
         <option name="contentProportion" value="0.19588745" />
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c05dbaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c05dbaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d963d73d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c05dbaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b328750c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -327,6 +298,7 @@
       <workItem from="1582872991581" duration="12670000" />
       <workItem from="1582890643474" duration="5544000" />
       <workItem from="1582939663218" duration="6208000" />
+      <workItem from="1582955083249" duration="9622000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
