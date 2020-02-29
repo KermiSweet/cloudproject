@@ -9,6 +9,7 @@
         <module name="mybatisGeneratorCore" />
         <module name="market_datacheck" />
         <module name="market_base" />
+        <module name="market_order" />
         <module name="market_mailsend" />
         <module name="zuulmodel" />
         <module name="market_goods" />
@@ -40,6 +41,7 @@
       <module name="market_goods" options="-parameters" />
       <module name="market_loginservice" options="-parameters" />
       <module name="market_mailsend" options="-parameters" />
+      <module name="market_order" options="-parameters" />
       <module name="market_shoppingcar" options="-parameters" />
       <module name="market_userservice" options="-parameters" />
       <module name="mybatisGeneratorCore" options="-parameters" />

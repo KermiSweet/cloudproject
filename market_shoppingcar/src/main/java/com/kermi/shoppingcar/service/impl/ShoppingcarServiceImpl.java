@@ -48,8 +48,6 @@ public class ShoppingcarServiceImpl implements ShoppingcarService {
     private final String REDIS_DEL_INFO = "Redis移除值:";
     private final String REDIS_GET_SUCCESS_INFO = "Redis取到值:";
 
-    private int pageSize = 10;
-
     @Override
     public boolean caroperation(Long id, int nums, String sessionid, int code) {
         //先查询用户是否为登录状态

@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/utils/ShoppingcarGetPrice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_order/market_order.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_order/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_order/src/main/java/com/kermi/order/OrderApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_order/src/main/java/com/kermi/order/config/RedisSessionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_order/src/main/java/com/kermi/order/config/RedisTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_order/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_shoppingcar/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/ShoppingcarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/ShoppingcarService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +101,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/market_base/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/market_common/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/market_order/src/main/java/com/kermi/order/config" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -121,11 +127,11 @@
       <recent name="com.kermi.base.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java_project\cloudproject\market_order\src\main\java\com\kermi\order\config" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\resources\mapper" />
       <recent name="D:\Java_project\cloudproject\market_shoppingcar\src\main\java\com\kermi\shoppingcar\config" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\mapper" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\pojo" />
-      <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\dao" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -232,6 +238,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="market_order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.order.OrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShoppingCarApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="market_shoppingcar" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.kermi.shoppingcar.ShoppingCarApplication" />
@@ -298,7 +311,7 @@
       <workItem from="1582872991581" duration="12670000" />
       <workItem from="1582890643474" duration="5544000" />
       <workItem from="1582939663218" duration="6208000" />
-      <workItem from="1582955083249" duration="9622000" />
+      <workItem from="1582955083249" duration="13268000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -398,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582896609682</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="购物车的CRUD，计算价格。需要数据List&lt;ShoppingcarRedisUtil&gt;">
+      <created>1582971531085</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1582971531085</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +462,8 @@
     <MESSAGE value="删除模块userservice,改market_base为用户主模块，减少feign之间的调用，解决超时问题，测试数据库改为本地数据库" />
     <MESSAGE value="springcloud configserver启用" />
     <MESSAGE value="购物车的添加删除，用一个方法编写，等待测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="购物车的添加删除，用一个方法编写，等待测试" />
+    <MESSAGE value="购物车的CRUD，计算价格。需要数据List&lt;ShoppingcarRedisUtil&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="购物车的CRUD，计算价格。需要数据List&lt;ShoppingcarRedisUtil&gt;" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

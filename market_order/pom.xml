@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>market_shoppingcar</artifactId>
+    <artifactId>market_order</artifactId>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
@@ -54,6 +54,14 @@
             <version>2.2.2.RELEASE</version>
         </dependency>
 
+        <!--spring-cloud-feign-->
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+
         <!--spring-cloud-config-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -78,7 +86,5 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.62</version>
         </dependency>
-
-
     </dependencies>
 </project>

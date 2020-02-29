@@ -19,6 +19,7 @@
         <module>market_mailsend</module>
         <module>mybatisGeneratorCore</module>
         <module>market_datacheck</module>
+        <module>market_order</module>
     </modules>
     <packaging>pom</packaging>
 
