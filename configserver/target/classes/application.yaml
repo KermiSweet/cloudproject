@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://120.79.14.47:3000/Kermi/cloudproject-config/
+          search-paths: respo
+          username: Kermi
+          password: Kermi0116
+      label: master
+server:
+  port: 8888

@@ -2,50 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec77e180-a3d6-40b4-84ce-696a0254c1f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/BusinessMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/Business.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/ShoppingCarMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/ShoppingcarService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/utils/ShoppingcarRedisItemUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/test/java/JSONObjectTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zuulmodel/src/main/java/com/kermi/zuulmodel/filter/UserLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/main/java/exception/ExceptionSeverity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/GoodsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_datacheck/src/main/java/com/kermi/datacheck/controller/GoodsCheckController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/config/RedisSessionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/config/RedisTemplateConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_base/src/main/java/com/kermi/base/service/impl/SessionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/ShoppingCarMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/mapper/ShoppingCarMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/java/com/kermi/common/pojo/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_shoppingcar/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/ShoppingCarApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/ShoppingCarApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/FocusMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/GoodsMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/GoodsTypeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/NoticeMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/OrderBaseMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/OrderDetailMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/ShoppingCarMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/dao/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/Focus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/Goods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/GoodsType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/Notice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/OrderBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/OrderDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/ShoppingCar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/java/com/generate/pojo/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/FocusMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/FocusMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsTypeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/NoticeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderBaseMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderBaseMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderDetailMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderDetailMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/ShoppingCarMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/ShoppingCarMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuulmodel/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_common/src/main/resources/mapper/ShoppingCarMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/market_common/src/main/resources/mapper/ShoppingCarMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/controller/ShoppingcarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/java/com/kermi/shoppingcar/service/impl/ShoppingcarServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/market_shoppingcar/src/test/java/JSONObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/market_shoppingcar/src/test/java/JSONObjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/FocusMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/GoodsTypeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/NoticeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderBaseMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/OrderDetailMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/ShoppingCarMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mybatisGeneratorCore/src/main/resources/mappers/UserMapper.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -160,6 +136,7 @@
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java_project\cloudproject\market_common\src\main\resources\mapper" />
+      <recent name="D:\Java_project\cloudproject\market_shoppingcar\src\main\java\com\kermi\shoppingcar\config" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\mapper" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\pojo" />
       <recent name="D:\Java_project\cloudproject\market_common\src\main\java\com\kermi\common\dao" />
@@ -188,22 +165,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JSONObjectTest.test2">
-    <configuration name="JSONObjectTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="market_shoppingcar" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="JSONObjectTest" />
-      <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.JSONObjectTest.test3">
     <configuration name="JSONObjectTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="market_shoppingcar" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="JSONObjectTest" />
       <option name="METHOD_NAME" value="test2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSONObjectTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="market_shoppingcar" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="JSONObjectTest" />
+      <option name="METHOD_NAME" value="test3" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -285,11 +262,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JSONObjectTest.test2" />
-        <item itemvalue="JUnit.JSONObjectTest.test1" />
+        <item itemvalue="JUnit.JSONObjectTest.test3" />
         <item itemvalue="Spring Boot.MarketApplication" />
         <item itemvalue="Spring Boot.DataCheckApplication" />
         <item itemvalue="Spring Boot.EurekaServerStart" />
+        <item itemvalue="JUnit.JSONObjectTest.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +278,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@88995086" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c05dbaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c05dbaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d963d73d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c05dbaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b328750c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -338,7 +325,8 @@
       <workItem from="1582769896712" duration="9309000" />
       <workItem from="1582855871922" duration="2613000" />
       <workItem from="1582872991581" duration="12670000" />
-      <workItem from="1582890643474" duration="5437000" />
+      <workItem from="1582890643474" duration="5544000" />
+      <workItem from="1582939663218" duration="6208000" />
     </task>
     <task id="LOCAL-00001" summary="basemodel-&gt; login&#10;goodsmodel-&gt; goods&#10;shoppingcarmodel-&gt; shoppingcar">
       <created>1582269410125</created>
@@ -431,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582777065513</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="购物车的添加删除，用一个方法编写，等待测试">
+      <created>1582896609682</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582896609682</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,7 +469,8 @@
     <MESSAGE value="基础服务重置密码，忘记密码编写完成，准备用feign整合到邮件系统" />
     <MESSAGE value="删除模块userservice,改market_base为用户主模块，减少feign之间的调用，解决超时问题，测试数据库改为本地数据库" />
     <MESSAGE value="springcloud configserver启用" />
-    <option name="LAST_COMMIT_MESSAGE" value="springcloud configserver启用" />
+    <MESSAGE value="购物车的添加删除，用一个方法编写，等待测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="购物车的添加删除，用一个方法编写，等待测试" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />

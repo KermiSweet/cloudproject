@@ -4,10 +4,7 @@ import com.kermi.shoppingcar.service.ShoppingcarService;
 import entity.ResResult;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,8 +16,8 @@ public class ShoppingcarController {
     private ShoppingcarService carservice;
 
     @RequestMapping(value = "/add/{id}/{nums}", method = RequestMethod.POST)
-    public ResResult addShoppingcar(@RequestParam("id") Long id,
-                                    @RequestParam("nums") int nums,
+    public ResResult addShoppingcar(@PathVariable("id") Long id,
+                                    @PathVariable("nums") int nums,
                                     HttpServletRequest req){
         if (carservice.caroperation(id, nums, getSessionId(req), 1)) {
             return new ResResult(true, StatusCode.OK, "添加成功");
@@ -29,8 +26,8 @@ public class ShoppingcarController {
     }
 
     @RequestMapping(value = "/del/{id}/{nums}", method = RequestMethod.POST)
-    public ResResult delShoppingcar(@RequestParam("id") Long id,
-                                    @RequestParam("nums") int nums,
+    public ResResult delShoppingcar(@PathVariable("id") Long id,
+                                    @PathVariable("nums") int nums,
                                     HttpServletRequest req) {
         if (carservice.caroperation(id, nums, getSessionId(req), 0)) {
             return new ResResult(true, StatusCode.OK, "删除成功");

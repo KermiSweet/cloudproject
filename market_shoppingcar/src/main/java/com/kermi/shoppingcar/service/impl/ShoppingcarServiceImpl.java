@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import util.IdWorker;
 import util.RedisUtil;
+import util.SessionAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,13 +51,13 @@ public class ShoppingcarServiceImpl implements ShoppingcarService {
         User user = null;
         String thismethodName = new Exception().getStackTrace()[0].getMethodName();
         String sessionredis = redisUtil.get(REDIS_SESSION_PREFIX + sessionid);
-        if (sessionid == null) {
+        if (sessionredis == null) {
             //用户没有登录，取值失败
             return false;
         } else {
             logger.info(thismethodName + REDIS_GET_SUCCESS_INFO + REDIS_SESSION_PREFIX + sessionid);
         }
-        Long userid = JSONObject.parseObject(sessionredis, User.class).getId();
+        Long userid = JSONObject.parseObject(String.valueOf(JSONObject.parseObject(sessionredis, SessionAttributes.class).getO()), User.class).getId();
 
         //先查询数据库中是否存在该用户的购物车
         String carinredis = (String) redisUtil.hGet(REDIS_SHOPPINGCAR_HASH, String.valueOf(userid));
@@ -88,13 +89,31 @@ public class ShoppingcarServiceImpl implements ShoppingcarService {
             return false;
         }
 
+
+        ShoppingCar tofinddb = new ShoppingCar();
+        tofinddb.setGoodstableId(addGoods.getId());
+        tofinddb.setUsertableId(userid);
+        tofinddb = carMapper.selectSelective(tofinddb);
         //先存主数据库
         if (code == 1) {
             //增加
-            carMapper.insertSelective(new ShoppingCar(idWorker.nextId(), userid, addGoods.getId(), nums));
+            if (tofinddb == null) {
+                carMapper.insertSelective(new ShoppingCar(idWorker.nextId(), userid, addGoods.getId(), nums));
+            } else {
+                tofinddb.setShoppingnum(tofinddb.getShoppingnum() + nums);
+                carMapper.updateByPrimaryKey(tofinddb);
+            }
         } else if (code == 0) {
             //删除
-            carMapper.deleteByPrimaryKey(addGoods.getId());
+            if (tofinddb == null || tofinddb.getShoppingnum() < nums) {
+                return false;
+            }
+            if (tofinddb.getShoppingnum() == nums) {
+                carMapper.deleteByGoodsIdAndUserId(userid, addGoods.getId());
+            } else {
+                tofinddb.setShoppingnum(tofinddb.getShoppingnum()-nums);
+                carMapper.updateByPrimaryKey(tofinddb);
+            }
         }
 
 
@@ -118,9 +137,13 @@ public class ShoppingcarServiceImpl implements ShoppingcarService {
             //删除
             for (ShoppingcarRedisItemUtil item : cars) {
                 if (id.equals(item.getGoods().getId())) {
-                    if (nums >= item.getNums()) {
+                    if (nums > item.getNums()) {
                         //要删除的数量大于了剩余数量
                         return false;
+                    }
+                    if (nums == item.getNums()) {
+                        //如果刚好删除完，则不加入列表
+                        continue;
                     }
                     item.setNums(item.getNums() - nums);
                 }
